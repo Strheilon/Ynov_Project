@@ -1,0 +1,9 @@
+User-agent: * 
+Disallow: /*.jpg^$
+Disallow: /*.png
+Disallow: /*ajout.php
+Disallow: /*supression.php
+Disallow: /*modification.php
+Disallow: /*connexion.php
+Disallow: /*form.php
+Sitemap: http://www.ynovlyon.com/sitemap.xml
