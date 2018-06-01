@@ -1,0 +1,85 @@
+.bannier {
+    height: 180px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+.conteneur
+{
+    display: flex;
+    background-color: #E5E7E6;
+    height: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.3em;
+}
+.element {
+    margin: auto;
+}
+.loupe {
+    height: 30px;
+    width: 30px;
+}
+.bouton {
+    background-color: #EC4363;
+    border: none;
+    border-radius: 0.3em;
+}
+.box {
+    background-color: #E5E7E6;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-radius: 0.5em;
+    margin-top: 15px;
+    display: flex;
+}
+.type {
+    margin: auto;
+}
+.title {
+    margin: auto;
+}
+.class {
+    margin: auto;
+}
+.period {
+        margin: auto;
+}
+.logo {
+    margin-left: 10%;
+}
+.titre {
+    margin-left: 30%;
+    margin-top: 5%;
+    font-size: 250%;
+}
+.flex {
+    display: flex;
+}
+.info {
+    margin-left: 10%;
+    background-color: #E5E7E6;
+    border-radius: 0.5em;
+    width: 45%;
+}
+.descrition {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #E5E7E6;
+    border-radius: 0.5em;
+    width: 70%;
+}
+.bt {
+    margin-left: 10%;
+}
+p {
+    margin-left: 3%;
+}
+.information {
+    margin-left: 3%;
+    margin-top: 3%;
+}

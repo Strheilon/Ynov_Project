@@ -1,0 +1,141 @@
+<main>
+	<br><img class="bannier" src="src/img/header_01.jpg"></img>
+    <form action="index.php" method="post">
+        <div class="conteneur">
+    		<div class="element">
+    	        <select name="types" id="disabledSelect" class="form-control">
+    	              <option>Type de contrat</option>
+        	          <option>Stage</option>
+        	          <option>Alternance</option>
+        	          <option>CDI</option>
+        	          <option>CDD</option>
+    	        </select>
+    	    </div>
+    		<div class="element">
+    	        <input name="competences" type="text" class="form-control" id="exampleInputPassword1" placeholder="Compétance clés">
+    	    </div>
+    	    <div class="element">
+    	        <select name="formations" id="disabledSelect" class="form-control">
+        			  <option>Formation</option>
+        	 		  <option>Ynov Informatique</option>
+        	 		  <option>Ynov Digital Business School</option>
+        	 		  <option>Ynov Web, Com & Graphic Design</option>
+        	 		  <option>Ynov Audiovisuel</option>
+        	 		  <option>Ynov Animation 3D Jeux Vidéo</option>
+    	        </select>
+    	    </div>
+    	    <div class="element">
+    	        <select name="classes" id="disabledSelect" class="form-control">
+        	          <option>Année d'etude</option>
+        	          <option>Bachelor Première année</option>
+        	          <option>Bachelor Deuxième année</option>
+        	          <option>Bachelor Troisième année</option>
+        	          <option>Master Première année</option>
+        	          <option>Master Deuxième année</option>
+    	        </select>
+    	    </div>
+    	    <div class="element">
+    	    	<button type="submit" class="bouton"><img src="src/img/loupe.png" class="loupe"></button>
+    	    </div>
+    	</div><br>
+    </form>
+	<?php while ($donnees = $reponse->fetch()): ?>
+		<a href="src/profil.php?id=<?= $donnees['id']; ?>">
+            <?php if (!empty($_POST['types']) && $_POST['types'] == $donnees['type']): ?>
+                <div class="box">
+                    <div class="type">
+                        <?= $donnees['type']; ?>
+                    </div>
+                    <div class="title">
+                        <?= $donnees['title']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['formation']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['class']; ?>
+                    </div>
+                    <div class="period">
+                        <?= $donnees['period']; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($_POST['competences']) && $_POST['competences'] == $donnees['title']): ?>
+                <div class="box">
+                    <div class="type">
+                        <?= $donnees['type']; ?>
+                    </div>
+                    <div class="title">
+                        <?= $donnees['title']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['formation']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['class']; ?>
+                    </div>
+                    <div class="period">
+                        <?= $donnees['period']; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($_POST['formations']) && $_POST['formations'] == $donnees['formation']): ?>
+                <div class="box">
+                    <div class="type">
+                        <?= $donnees['type']; ?>
+                    </div>
+                    <div class="title">
+                        <?= $donnees['title']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['formation']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['class']; ?>
+                    </div>
+                    <div class="period">
+                        <?= $donnees['period']; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($_POST['classes']) && $_POST['classes'] == $donnees['class']): ?>
+                <div class="box">
+                    <div class="type">
+                        <?= $donnees['type']; ?>
+                    </div>
+                    <div class="title">
+                        <?= $donnees['title']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['formation']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['class']; ?>
+                    </div>
+                    <div class="period">
+                        <?= $donnees['period']; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if (empty($_POST['types']) && empty($_POST['formations']) && empty($_POST['classes']) || $_POST['types'] == "Type de contrat" && empty($_POST['competences']) && $_POST['formations'] == "Formation" && $_POST['classes'] == "Année d'etude"): ?>
+                <div class="box">
+                    <div class="type">
+                        <?= $donnees['type']; ?>
+                    </div>
+                    <div class="title">
+                        <?= $donnees['title']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['formation']; ?>
+                    </div>
+                    <div class="class">
+                        <?= $donnees['class']; ?>
+                    </div>
+                    <div class="period">
+                        <?= $donnees['period']; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </a>
+	<?php endwhile; ?>
+</main>

@@ -1,0 +1,32 @@
+<br><img class="bannier" src="img/header_01.jpg" width='250px' height='200px'>
+<main>
+    <div class="flex">
+    <img class="logo" src="img/logo.jpg" width='250px' height='200px'>
+        <?php foreach($hello as $key => $classe): ?>
+            <?php for ($i=1; $i < 50; $i++): ?>
+                <?php if ($_GET['id'] == $i && $classe['id'] == $i) : ?>
+                    <div class="titre">
+                        <?= htmlspecialchars($classe['title'])?><br><br>
+                    </div></div>
+                	<div class="flex">
+                        <div class="info">
+                            <h2 class="information">Information</h2><br>
+                            <p>Contrat : <td><?= htmlspecialchars($classe['type'])?></td><br>
+                            <p>Année d'étude : <td><?= htmlspecialchars($classe['class'])?></td><br>
+                            <p>Durée : <td><?= htmlspecialchars($classe['period'])?></td><br>
+                            <p>Date de début : <td><?= htmlspecialchars($classe['from_date'])?></td><br>
+                            <p>Date de fin : <td><?= htmlspecialchars($classe['to_date'])?></td><br>
+                        </div>
+                    	<div class="descrition">
+                            <h2 class="information">Description de l'offre</h2>
+                            <p><td><?= htmlspecialchars($classe['description'])?></td>
+                        </div>
+                	</div>
+                <?php endif; ?>
+            <?php endfor; ?>
+        <?php endforeach ?>
+    <br><div class="bt">
+    	<a href="formulaire.php" class="btn btn-primary">Formulaire</a>
+		<a href="../index.php" class="btn btn-primary">Retour</a>
+    </div><br>
+</main>
